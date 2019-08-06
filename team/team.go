@@ -69,7 +69,9 @@ func GetPlayers() (string, error) {
 func GetPlayer(name string) (string, error) {
 
 	name = strings.ReplaceAll(name, " ", "%20")
-	url := fmt.Sprintf("https://www.thesportsdb.com/api/v1/json/1/searchplayers.php?p=%s", name)
+	team := strings.ReplaceAll("Man United", " ", "%20")
+
+	url := fmt.Sprintf("https://www.thesportsdb.com/api/v1/json/1/searchplayers.php?t=%s&p=%s", team, name)
 
 	res, err := http.Get(url)
 	if err != nil {
