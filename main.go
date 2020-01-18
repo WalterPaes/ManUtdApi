@@ -9,5 +9,6 @@ import (
 func main() {
 	http.HandleFunc("/", adapters.GetAllPlayers)
 	http.HandleFunc("/player/", adapters.GetPlayer)
+	log.Println("Executing...")
 	log.Fatal(http.ListenAndServe(":3000", nil))
 }
