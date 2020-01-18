@@ -1,5 +1,6 @@
 package player
 
+// Player Data ...
 type Player struct {
 	StrPlayer      string `json:"strPlayer"`
 	DateBorn       string `json:"dateBorn"`

@@ -1,15 +1,14 @@
 package main
 
 import (
+	"github.com/WalterPaes/ManUtdApi/pkg/adapters"
 	"log"
 	"net/http"
-
-	"github.com/WalterPaes/ManUtdApi/team"
 )
 
 func main() {
-	http.HandleFunc("/", team.Handler)
-	http.HandleFunc("/player/", team.Handler)
-	log.Println("Executando...")
+	http.HandleFunc("/", adapters.GetAllPlayers)
+	http.HandleFunc("/player/", adapters.GetPlayer)
+	log.Println("Executing...")
 	log.Fatal(http.ListenAndServe(":3000", nil))
 }
