@@ -1,8 +1,9 @@
-package team
+package teakjddjdm
 
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/WalterPaes/ManUtdApi/pkg/domains/player"
 	"io/ioutil"
 	"net/http"
 	"strings"
